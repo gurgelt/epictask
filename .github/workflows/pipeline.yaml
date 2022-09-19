@@ -22,8 +22,9 @@ jobs:
         with:
           java-version: '17'
 
-      - name: Build with Maven 
-        run: mvn package --file pom.xml
+      - name: Build with Maven
+        run: mvn -B package --file pom.xml
+        working-directory: ./epictaskapi/
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
