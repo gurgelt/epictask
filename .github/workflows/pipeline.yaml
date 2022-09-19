@@ -30,13 +30,13 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: devchallenge
-          path: '${{ github.workspace }}/target/*.jar'
+          path: '${{ github.workspace }}/target/package.jar'
 
       - name: Azure WebApp
         uses: Azure/webapps-deploy@v2
         with:
           app-name: devchallenge
-          package: '${{ github.workspace }}/target/*.jar'
+          package: package.jar
 
       # Azure logout 
       - name: logout
