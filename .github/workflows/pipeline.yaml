@@ -36,7 +36,7 @@ jobs:
         uses: Azure/webapps-deploy@v2
         with:
           app-name: devchallenge
-          package: package.jar
+          package: ./epictaskapi/package.jar
 
       # Azure logout 
       - name: logout
