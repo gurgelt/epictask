@@ -26,11 +26,11 @@ jobs:
         run: mvn -B package --file pom.xml
         working-directory: ./epictaskapi/
 
-      - name: Upload artifact for deployment job
-        uses: actions/upload-artifact@v2
-        with:
-          name: devchallenge
-          path: '${{ github.workspace }}/target/package.jar'
+#       - name: Upload artifact for deployment job
+#         uses: actions/upload-artifact@v2
+#         with:
+#           name: devchallenge
+#           path: '${{ github.workspace }}/target/package.jar'
 
       - name: Azure WebApp
         uses: Azure/webapps-deploy@v2
