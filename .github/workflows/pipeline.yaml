@@ -38,7 +38,7 @@ jobs:
 
       - name: Build with Maven
         run: mvn -B package --file pom.xml
-        working-directory: complete
+        working-directory: ./epictaskapi/
 
       - name: Azure WebApp
         uses: Azure/webapps-deploy@v2
